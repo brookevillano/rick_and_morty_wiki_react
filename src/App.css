@@ -6,8 +6,13 @@
     -0.5px -0.5px 0 #000,  
     0.5px -0.5px 0 #000,
     -0.5px 0.5px 0 #000,
-    0.15px 0.2px 0 #000, /* Creates the black outline */
-    0 0 8px rgba(80, 253, 0, 0.8); /* Teal glow with a bit of transparency */
+    0.5px 0.5px 0 #000, /* Black outline */
+    -1px -1px 0 rgba(80, 253, 0, 0.8),  
+    1px -1px 0 rgba(80, 253, 0, 0.8),
+    -1px 1px 0 rgba(80, 253, 0, 0.8),
+    1px 1px 0 rgba(80, 253, 0, 0.8), /* Second outline with specified color */
+    0 0 1px rgba(80, 253, 0, 0.8), /* Glow effect */
+    0 0 8px rgba(80, 253, 0, 0.8); /* Outer glow for more prominence */
 }
 
 
