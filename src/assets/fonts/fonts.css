@@ -1,0 +1,8 @@
+@font-face {
+     font-family: 'rick_font'; /* Use this name to reference the font */
+     src: url('./WubbaLubbaDubDub.otf') format('opentype'), /* Adjust the path as necessary */
+          url('./WubbaLubbaDubDub.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+   }
+   

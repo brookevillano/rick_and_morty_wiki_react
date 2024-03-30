@@ -1,0 +1,16 @@
+.customHeader {
+  font-family: 'rick_font', Ubuntu;
+  color: rgb(23, 160, 160); /* Set your desired color */
+  font-size: 18px; /* Adjust font size as needed */
+  text-shadow: 
+    -0.4px -0.3px 0 #000,  
+    0.4px -0.1px 0 #000,
+    -0.3px 0.1px 0 #000,
+    0.1px 0.3px 0 #000, /* Creates the black outline */
+    0 0 8px rgba(80, 253, 0, 0.8); /* Teal glow with a bit of transparency */
+}
+
+
+
+
+
