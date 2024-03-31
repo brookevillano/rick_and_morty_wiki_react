@@ -1,3 +1,19 @@
+html, body, .App {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('./assets/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .customHeader {
   font-family: 'rick_font', Ubuntu;
   color: rgb(23, 160, 160); /* Set your desired color */
@@ -14,6 +30,7 @@
     0 0 1px rgba(80, 253, 0, 0.8), /* Glow effect */
     0 0 8px rgba(80, 253, 0, 0.8); /* Outer glow for more prominence */
 }
+
 
 
 
