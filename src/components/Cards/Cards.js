@@ -6,15 +6,17 @@ const Cards = ({results}) => {
     console.log(results); 
     if(results){
        display = results.map(x=>{
-           let {id, name, image, location, status} = x
-           return(<div key={id} className="col-4 mb-4 position-relative">
+           let {id, name, image, location, status, type, species} = x
+           return(<div key={id} className={`col-sm-6 col-md-4 mb-4 position-relative ${styles.custom_col}`}>
                 <div className={`${styles.cards} h-100  ${styles.cardHoverEffect}`}>
                     <img src={image} alt="" className={`${styles.img} img-fluid`}></img>
                     <div style={{padding: "10px"}}className="content">
-                        <div className="fs-4 fw-bold mb-4">{name}</div>
+                        <div className="fs-5 fw-bold">{name}</div>
+                        <div className="fs-6 text-primary">{species}</div>
+                        <hr></hr>
                         <div className="">
-                            <div className="fs-6">Last location</div>
-                            <div className="fs-5">{location.name}</div>
+                            <span className="material-symbols-outlined fs-7" style={{ fontSize: '14px' }}>location_on</span> {location.name} 
+
                         </div>
                     </div>
                 </div>
