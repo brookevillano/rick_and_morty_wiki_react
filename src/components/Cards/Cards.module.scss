@@ -1,0 +1,41 @@
+$radius: 10px; 
+
+.cards{
+    border: 2px solid rgba(80, 253, 0, 0.521);
+    border-radius: $radius;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+
+  
+.cardHoverEffect:hover {
+    transform: scale(1.04); /* Slightly increase the card's size */
+    box-shadow: 0 0 20px rgba(80, 253, 0, 0.8); /* Green glow effect */
+  }
+  
+
+.img{
+    border-radius: $radius $radius 0 0; 
+}
+.badge{
+    top: 10px;
+    right: 20px; 
+    font-size: 17px;
+}
+
+.custom_col {
+    @media (min-width: 1200px) { /* Adjust this breakpoint as needed */
+      flex: 0 0 auto;
+      width: 20%; /* Forces 5 cards in a row */
+    }
+}
+
+hr {
+    border: none;
+    height: 1px; /* Line thickness */
+    background-color: #333; /* Line color */
+    margin-top: 10px; /* Space above the line */
+    margin-bottom: 20px; /* Space below the line */
+}
+  
