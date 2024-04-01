@@ -15,17 +15,17 @@ const Filters = ({
   updateSearchGender,
 }) => {
   return (
-    <div className={`d-flex align-items-start justify-content-center gap-2 ${styles.filtersContainer}`}>
+    <div className={`d-flex align-items-start justify-content-center gap-3`}>
       {/* Filter by searching for a name*/}
-      <form className={`${styles.filter_component}d-flex justify-content-center gap-2 mb-5`}>
+      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
         <Name
           updatePageNumber={updatePageNumber}
           updateSearchName={updateSearchName}
         />
-      </form>
+      </div>
 
       {/* Filter by selecting a status*/}
-      <div className={`${styles.filter_component} d-flex justify-content-center gap-2 mb-5`}>
+      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
         {" "}
         <Status
           updatePageNumber={updatePageNumber}
@@ -34,14 +34,14 @@ const Filters = ({
       </div>
 
       {/* Filter by searching for a species*/}
-      <form className={`${styles.filter_component} d-flex justify-content-center gap-2 mb-5`}>
+      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
         <Species
           updatePageNumber={updatePageNumber}
           updateSearchSpecies={updateSearchSpecies}
         />
-      </form>
+      </div>
 
-      <div className={`${styles.filter_component} d-flex justify-content-center gap-2 mb-5`}>
+      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
         {" "}
         <Gender
           updatePageNumber={updatePageNumber}
@@ -50,14 +50,14 @@ const Filters = ({
       </div>
 
       {/* Filter by searching for a type*/}
-      <form className={`${styles.filter_component} d-flex justify-content-center gap-2 mb-5`}>
+      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
         <Type
           updatePageNumber={updatePageNumber}
           updateSearchType={updateSearchType}
         />
-      </form>
+      </div>
 
-      <div className={`${styles.filter_component} d-flex justify-content-center gap-2 mb-5`}>
+      <div className={`d-flex justify-content-center mb-3`}>
         <button
           className={`${styles.btn} btn btn-danger fs-5 align-self-center`}
         >
