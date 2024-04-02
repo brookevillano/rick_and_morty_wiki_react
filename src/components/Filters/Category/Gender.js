@@ -20,18 +20,18 @@ const Gender = ({ updatePageNumber, updateSearchGender }) => {
             aria-expanded={isOpen}
             aria-controls="collapseGender"
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              width: '100%',
-              justifyContent: 'space-between',
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              justifyContent: "space-between",
             }}
           >
-            <span style={{ flex: 1, textAlign: 'left' }}>Gender</span>
+            <span style={{ flex: 1, textAlign: "left" }}>Gender</span>
             <span
               className="material-symbols-outlined"
               style={{
-                fontSize: '18px',
-                lineHeight: '1',
+                fontSize: "18px",
+                lineHeight: "1",
                 flexShrink: 0,
               }}
             >
