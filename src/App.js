@@ -6,7 +6,7 @@ import "./App.css";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
-import Name from "./components/Filters/Category/Name";
+
 
 function App() {
   let [pageNumber, updatePageNumber] = useState(1); // let[var, function] = useState(default val).. sets default page number to 1
