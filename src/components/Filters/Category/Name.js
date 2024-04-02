@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../Filters.module.scss";
 
-const Name = ({ updatePageNumber, updateSearchName }) => {
+const Name = ({ updatePageNumber, updateSearchName}) => {
   return (
     <form className="">
       <input
