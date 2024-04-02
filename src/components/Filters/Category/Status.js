@@ -19,19 +19,19 @@ const Status = ({ updateStatus, updatePageNumber }) => {
             aria-expanded={isOpen}
             aria-controls="collapseStatus"
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              width: '100%',
-              justifyContent: 'space-between', // This will ensure items are aligned to each end
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              justifyContent: "space-between", // This will ensure items are aligned to each end
             }}
           >
-            <span style={{ flex: 1, textAlign: 'left' }}>Status</span> 
+            <span style={{ flex: 1, textAlign: "left" }}>Status</span>
             <span
               className="material-symbols-outlined"
-              style={{ 
-                fontSize: '18px', 
-                lineHeight: '1',
-                textAlign: 'right', // Ensures text alignment but might not be necessary for icons
+              style={{
+                fontSize: "18px",
+                lineHeight: "1",
+                textAlign: "right", // Ensures text alignment but might not be necessary for icons
                 flexShrink: 0, // Prevents the icon from shrinking
               }}
             >
