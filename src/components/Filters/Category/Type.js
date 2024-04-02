@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../Filters.module.scss";
 
-const Type = ({ updatePageNumber, updateSearchType }) => {
+const Type = ({ updatePageNumber, updateSearchType}) => {
   return (
     <form className="d-flex justify-content-center gap-4 mb-2">
       <input
