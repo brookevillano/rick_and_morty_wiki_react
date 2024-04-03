@@ -6,18 +6,36 @@ import "./App.css";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
+import Navbar from "./components/Navbar/Navbar";
+import CardDetails from "./components/Cards/CardDetails";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:id" element={<CardDetails />} />  
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+const Home = () => {
   let [pageNumber, updatePageNumber] = useState(1); // let[var, function] = useState(default val).. sets default page number to 1
   let [searchName, updateSearchName] = useState("");
   let [searchSpecies, updateSearchSpecies] = useState("");
   let [searchStatus, updateStatus] = useState("");
   let [searchType, updateSearchType] = useState("");
-  let [searchGender, updateSearchGender] = useState("")
+  let [searchGender, updateSearchGender] = useState("");
   let [fetchedData, updateFetchedData] = useState([]);
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${searchName}&species=${searchSpecies}&type=${searchType}&status=${searchStatus}&gender=${searchGender}`; // api link stored in api var, use template literal to use variables
   let { info, results } = fetchedData; // destructors fetchedData into info and results
+
   useEffect(() => {
     // IIFE function (immediately invoked function)
     (async function () {
@@ -28,11 +46,6 @@ function App() {
   }, [api]); // the [api] basically says to watch the api for changes, if there is a change we will run this func again
   return (
     <div className="App body">
-      <header className="App-header">
-        <h1 className="text-center customHeader my-2 mb-4 mt-4">
-          Rick & Morty <span className="text-primary">Character WiKi</span>
-        </h1>
-      </header>
       {/* <Name updatePageNumber={updatePageNumber} updateSearch={updateSearch}/> */}
 
       <div className="container ubuntu mb-5">
@@ -49,7 +62,7 @@ function App() {
 
       <div className="container ubuntu">
         <div className="row g-4 justify-content-center">
-          <Cards results={results} />
+          <Cards page="/" results={results} />
         </div>
       </div>
 
@@ -60,6 +73,6 @@ function App() {
       />
     </div>
   );
-}
+};
 
 export default App;
