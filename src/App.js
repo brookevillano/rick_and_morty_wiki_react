@@ -10,7 +10,6 @@ import Navbar from "./components/Navbar/Navbar";
 import CardDetails from "./components/Cards/CardDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
 function App() {
   return (
     <Router>
@@ -18,7 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:id" element={<CardDetails />} />  
+          <Route path="/:id" element={<CardDetails />} />
         </Routes>
       </div>
     </Router>
