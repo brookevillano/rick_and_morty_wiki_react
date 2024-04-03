@@ -26,7 +26,7 @@ const Filters = ({
   };
 
   return (
-    <div className={`d-flex align-items-start justify-content-center gap-3`}>
+    <div className={`d-flex flex-sm-row align-items-start justify-content-center gap-3`}>
       <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
         <Name
           updatePageNumber={updatePageNumber}
