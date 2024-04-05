@@ -14,7 +14,6 @@ const Filters = ({
   updateStatus,
   updateSearchGender,
 }) => {
-
   const clear = () => {
     updatePageNumber(1);
     updateSearchName("");
@@ -26,39 +25,54 @@ const Filters = ({
   };
 
   return (
-    <div className={`d-flex flex-sm-row align-items-start justify-content-center gap-3`}>
-      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
+    <div
+      className={`d-flex flex-sm-row align-items-start justify-content-center gap-3`}
+    >
+      <div
+        className={`${styles.filters_container} d-flex justify-content-center mb-2`}
+      >
         <Name
           updatePageNumber={updatePageNumber}
           updateSearchName={updateSearchName}
         />
       </div>
-      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
+      <div
+        className={`${styles.filters_container} d-flex justify-content-center mb-2`}
+      >
         <Status
-          updatePageNumber={updatePageNumber} 
+          updatePageNumber={updatePageNumber}
           updateStatus={updateStatus}
         />
       </div>
-      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
+      <div
+        className={`${styles.filters_container} d-flex justify-content-center mb-2`}
+      >
         <Species
           updatePageNumber={updatePageNumber}
           updateSearchSpecies={updateSearchSpecies}
         />
       </div>
-      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
+      <div
+        className={`${styles.filters_container} d-flex justify-content-center mb-2`}
+      >
         <Gender
           updatePageNumber={updatePageNumber}
           updateSearchGender={updateSearchGender}
         />
       </div>
-      <div className={`${styles.filters_container} d-flex justify-content-center mb-2`}>
+      <div
+        className={`${styles.filters_container} d-flex justify-content-center mb-2`}
+      >
         <Type
           updatePageNumber={updatePageNumber}
           updateSearchType={updateSearchType}
         />
       </div>
       <div className={`d-flex justify-content-center mb-3`}>
-        <button onClick={clear} className={`${styles.btn} btn btn-danger fs-5 align-self-center`}>
+        <button
+          onClick={clear}
+          className={`${styles.btn} btn btn-danger fs-5 align-self-center`}
+        >
           Clear
         </button>
       </div>
