@@ -1,0 +1,145 @@
+$radius: 10px;
+
+.cards {
+  border: 2px solid rgba(80, 253, 0, 0.521);
+  border-radius: $radius;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+  min-height: 300px;
+}
+
+.cardHoverEffect:hover {
+  transform: scale(1.04); /* Slightly increase the card's size */
+  box-shadow: 0 0 20px rgba(80, 253, 0, 0.8); /* Green glow effect */
+}
+
+.display {
+  color: white;
+  font-family: "ubuntu";
+  font-weight: bold;
+  text-align: center;
+}
+
+.img {
+  border-radius: $radius $radius 0 0;
+  width: 100%;
+}
+.badge {
+  top: 10px;
+  right: 20px;
+  font-size: 17px;
+}
+
+.custom_col {
+  @media (min-width: 1200px) {
+    /* Adjust this breakpoint as needed */
+    flex: 0 0 auto;
+    width: 20%; /* Forces 5 cards in a row */
+  }
+}
+
+.cardDetailBG {
+  margin: 2rem auto; // Adds vertical space and centers the card horizontally
+  padding: 20px; // Adds space inside the card
+  border-radius: $radius; // Apply the variable for border-radius
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+    // Optional: adds a soft shadow
+    0 0 20px rgba(80, 253, 0, 0.8); // Green glow effect
+  border: 3px solid rgba(80, 253, 0, 0.521); // Keeps your border style
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for transform and shadow
+
+  // Remove fixed sizing and use max-width for larger screens
+  width: 100%; // Use full width by default
+  max-width: 650px; // Maximum width but allow it to be smaller on smaller devices
+  box-sizing: border-box; // Include padding and border in the element's total width and height
+
+  @media (max-width: 768px) {
+    // Adjustments for tablet devices
+    margin: 1rem auto;
+    padding: 15px;
+  }
+
+  @media (max-width: 576px) {
+    // Adjustments for mobile devices
+    margin: 1rem auto;
+    padding: 10px;
+  }
+}
+hr {
+  border: none;
+  height: 1px; /* Line thickness */
+  background-color: #333; /* Line color */
+  margin-top: 10px; /* Space above the line */
+  margin-bottom: 20px; /* Space below the line */
+}
+
+.prev_next_btn {
+  margin: 10px;
+}
+
+.custom_btn,
+.custom_btn a {
+  border-radius: 10px !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.custom_btn {
+  box-shadow: 0 0 20px rgba(80, 253, 0, 0.8); /* Green glow effect */
+}
+
+.page_link_btn {
+  border-radius: 10px !important;
+  box-shadow: 0 0 20px rgba(80, 253, 0, 0.8); /* Green glow effect */
+}
+
+/* Optionally, if you want to apply the radius to page numbers as well */
+.custom_link {
+  border-radius: 10px !important;
+}
+
+.alive,
+.dead,
+.unknown {
+  color: rgba(80, 253, 0, 0.8); // Use this for alive status, change for others
+  display: inline-block; // To allow size adjustments
+  font-size: 1.5rem; // Adjust the font size to change the dot size
+}
+
+.dead {
+  color: red;
+}
+
+.unknown {
+  color: gray;
+}
+
+
+// Media queries for mobile screens
+@media (max-width: 576px) {
+  // Makes the back button full width and adds bottom margin
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  // Ensures the image scales correctly on smaller devices
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // Adjust the positioning of the bottom navigation buttons
+  .fixedToBottom {
+    position: static;
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  // Increases tap targets for buttons on touch devices
+  .custom_btn {
+    padding: 10px 20px;
+  }
+}
