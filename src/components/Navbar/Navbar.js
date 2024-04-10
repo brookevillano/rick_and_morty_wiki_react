@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className={'navbar mb-4'}>
       <div className="container">
       <Link to="/" className="customHeader navbar-brand">
-        Rick & Morty <span className="text-primary">Character WiKi</span>
+        Rick and Morty <span className="text-primary">Character WiKi</span>
       </Link>
       </div>
     </nav>
